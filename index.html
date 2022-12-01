@@ -18,7 +18,7 @@
 <script async type = 'text/javascript'>
 const pictu = document.getElementById("pictu");
 
-pictu.addEventListener('mouseover', function(event) {
+pictu.addEventListener('pointerover', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
@@ -26,7 +26,7 @@ pictu.addEventListener('touchstart', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
-pictu.addEventListener('mousedown', function(event) {
+pictu.addEventListener('pointerdown', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
@@ -49,7 +49,11 @@ pictu.addEventListener('pointerup', function(event) {
 pictu.addEventListener('touchend', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
-}); 
+});
+pictu.addEventListener('touchmove', function(event) {
+  const sound = document.getElementById("track1");
+  sound.play();
+});
 </script>
 
 </body>

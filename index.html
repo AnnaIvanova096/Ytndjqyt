@@ -22,6 +22,10 @@ pictu.addEventListener('pointerover', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
+pictu.addEventListener('touchstart', function(event) {
+  const sound = document.getElementById("track1");
+  sound.play();
+});
 pictu.addEventListener('pointerdown', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
@@ -41,7 +45,11 @@ pictu.addEventListener('pointerleave', function(event) {
 pictu.addEventListener('pointerup', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
-});  
+});
+pictu.addEventListener('touchend', function(event) {
+  const sound = document.getElementById("track1");
+  sound.pause();
+}); 
 </script>
 
 </body>

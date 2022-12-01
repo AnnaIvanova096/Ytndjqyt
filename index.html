@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+
+  <title>Пустой html5 шаблон</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+
+<body>
+<img id="pictu" src = "https://d1.endata.cx/data/games/75162/m1000x1000.jpg">
+<audio id="track1" src="https://d1.endata.cx/data/games/75162/nswnsw.mp3" type="audio/mpeg" preload = 'auto'></audio>
+<script async type = 'text/javascript'>
+const pictu = document.getElementById("pictu");
+
+pictu.addEventListener('pointerover', function(event) {
+  const sound = document.getElementById("track1");
+  sound.play();
+});
+pictu.addEventListener('pointerleave', function(event) {
+  const sound = document.getElementById("track1");
+  sound.pause();
+});
+</script>
+
+</body>
+</html>

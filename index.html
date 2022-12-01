@@ -18,13 +18,17 @@
 <script async type = 'text/javascript'>
 const pictu = document.getElementById("pictu");
 
-pictu.addEventListener('pointerover', function(event) {
+pictu.addEventListener('mouseqover', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
-pictu.addEventListener('touchmove', function(event) {
+pictu.addEventListener('touchstart', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
+});
+pictu.addEventListener('touchend', function(event) {
+  const sound = document.getElementById("track1");
+  sound.pause();
 });
 pictu.addEventListener('pointercancel', function(event) {
   const sound = document.getElementById("track1");

@@ -22,9 +22,13 @@ pictu.addEventListener('pointerover', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
-pictu.addEventListener('pointermove', function(event) {
+pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
+});
+pictu.addEventListener('pointercancel', function(event) {
+  const sound = document.getElementById("track1");
+  sound.pause();
 });
 pictu.addEventListener('pointerleave', function(event) {
   const sound = document.getElementById("track1");

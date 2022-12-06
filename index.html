@@ -20,8 +20,6 @@
   
 const sound = document.getElementById("track1");  
 const pictu = document.getElementById("pictu");
-  let idle = setTimeout(sound.pause(), 1000);
-  pictu.onmousemove = clearTimeout(idle)
   
 pictu.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1");

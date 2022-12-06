@@ -21,6 +21,7 @@ const pictu = document.getElementById("pictu");
 pictu.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
+  if (onmousemove.movementX === 0 OR onmousemove.movementY === 0) sound.pause();
 });
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
@@ -38,7 +39,7 @@ pictu.addEventListener('touchcancel', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
 });
-if (onmousemove.movementX === 0 OR onmousemove.movementY === 0) sound.pause();
+
 </script>
 
 </body>

@@ -18,6 +18,10 @@
 <script async type = 'text/javascript'>
 const pictu = document.getElementById("pictu");
 const sound = document.getElementById("track1");
+  setInterval(let MX = MouseEvent.movementX, 100)
+  setInterval(let MY = MouseEvent.movementY, 100)
+  if (MX == 0 AND MY == 0) {
+    sond.pause();}
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();

@@ -20,7 +20,12 @@ const pictu = document.getElementById("pictu");
 
 pictu.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1");
+  let MX = mouseover.movementX
+  let MY = mouseover.movementY
+  if (MX != 0 OR MY !=0) {
   sound.play();
+}else{
+   sound.pause();}
 });
 
 pictu.addEventListener('touchmove', function(event) {

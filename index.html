@@ -21,10 +21,6 @@
 const sound = document.getElementById("track1");  
 const pictu = document.getElementById("pictu");
 
-pictu.addEventListener('mousemove', function(event) {
-  const sound = document.getElementById("track1"); 
-  sound.play();
-});
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
@@ -62,8 +58,11 @@ function mouse (element, delay, callback) {
    return element.ms;
 };
   
-var x = mouse(pictu, 5000, function (a) {
+let x = mouse(pictu, 5000, function (a) {
    sound.pause();
+});
+  x.toggle(1); addEventListener("mousemove", function () {
+   sound.play();
 });
   </script>
 </body>

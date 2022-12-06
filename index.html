@@ -18,18 +18,19 @@
 <script async type = 'text/javascript'>
 const pictu = document.getElementById("pictu");
 const sound = document.getElementById("track1");
-setInterval(let MX = pictu.mouseover.movementX, 100)
-setInterval(let MY = pictu.mouseover.movementY, 100)
-  if (MX != 0 OR MY !=0) {
-  sound.play();
-}else if (MX == 0 AND MY == 0) {
-   sound.pause();}
-});
-
+setInterval(let MX = mouseover.movementX, 100)
+setInterval(let MY = mouseover.movementY, 100)
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
+if(MX != 0 OR MY != 0){  
+pictu.addEventListener('mousemove', function(event) {
+  const sound = document.getElementById("track1");
+  sound.play();
+}
+else {
+  sound.pause();});
 pictu.addEventListener('mouseout', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();

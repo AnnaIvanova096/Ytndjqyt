@@ -18,8 +18,10 @@
 <script async type = 'text/javascript'>
 const pictu = document.getElementById("pictu");
 const sound = document.getElementById("track1");
-setInterval(let MX = mouseover.movementX, 1000)
-setInterval(let MY = mouseover.movementY, 1000)
+setInterval(let MX = mousemove.movementX, 100)
+setInterval(let MY = mousmove.movementY, 100)
+if (MX == 0 AND MY == 0) {
+  sound.pause();}
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
@@ -40,8 +42,6 @@ pictu.addEventListener('touchcancel', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
 });
-if (MX == 0 AND MY == 0) {
-  sound.pause();}
 </script>
 
 </body>

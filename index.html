@@ -26,11 +26,13 @@ pictu.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
- 
+let idle = setTimeout(()=> sound.pause(), 1000);
+pictu.onmousemove = clearTimeout(idle)  
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
-}); 
+});
+
 pictu.addEventListener('mouseout', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();

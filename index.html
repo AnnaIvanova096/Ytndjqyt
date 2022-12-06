@@ -23,14 +23,11 @@ setInterval(let MY = mouseover.movementY, 100)
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
-});
-if(MX != 0 OR MY != 0){  
+}); 
 pictu.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
-}
-else {
-  sound.pause();});
+});
 pictu.addEventListener('mouseout', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
@@ -43,6 +40,8 @@ pictu.addEventListener('touchcancel', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
 });
+while (MX == 0 AND MY == 0) {
+  sound.pause();}
 </script>
 
 </body>

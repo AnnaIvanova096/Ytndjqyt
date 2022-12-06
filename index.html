@@ -17,30 +17,10 @@
 <audio loop id="track1" src="https://d1.endata.cx/data/games/75162/nswnsw.mp3" type="audio/mpeg" preload = 'auto'></audio>
   
 <script async type = 'text/javascript'>
-function mouse (element, delay, callback) {
-   element.ms = {};
-   element.ms.x = 0;
-   element.ms.y = function () {
-      if ((++element.ms.x) == delay) element.ms.callback(element, element.ms);
-   };
-   element.ms.callback = callback;
-   element.ms.toggle = function (state) {
-      if ([0, "off"][state]) clearInterval(element.ms.z);
-      if ([1, "on"][state]) element.ms.z = setInterval(element.ms.y, 1);
-   };
-   element.ms.remove = function () {
-      element.ms = null; return delete element.ms;
-   };
-   element.onmousemove = function () {
-      element.ms.x = -1;
-   };
-   return element.ms;
-};  
+
 const sound = document.getElementById("track1");  
 const pictu = document.getElementById("pictu");
-let x = mouse(pictu, 5000, function (a) {
-   sound.pause();
-});
+
 pictu.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1"); 
   sound.play();
@@ -61,6 +41,29 @@ pictu.addEventListener('touchend', function(event) {
 pictu.addEventListener('touchcancel', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
+});
+function mouse (element, delay, callback) {
+   element.ms = {};
+   element.ms.x = 0;
+   element.ms.y = function () {
+      if ((++element.ms.x) == delay) element.ms.callback(element, element.ms);
+   };
+   element.ms.callback = callback;
+   element.ms.toggle = function (state) {
+      if ([0, "off"][state]) clearInterval(element.ms.z);
+      if ([1, "on"][state]) element.ms.z = setInterval(element.ms.y, 1);
+   };
+   element.ms.remove = function () {
+      element.ms = null; return delete element.ms;
+   };
+   element.onmousemove = function () {
+      element.ms.x = -1;
+   };
+   return element.ms;
+};
+  
+let x = mouse(pictu, 5000, function (a) {
+   sound.pause();
 });
   </script>
 </body>

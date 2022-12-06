@@ -21,7 +21,8 @@ const sound = document.getElementById("track1");
   setInterval(let MX = MouseEvent.movementX, 100);
   setInterval(let MY = MouseEvent.movementY, 100);
   if (MX == 0 AND MY == 0) {
-    sond.pause();}
+    sound.pause();}
+  else { sound.play();}
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();

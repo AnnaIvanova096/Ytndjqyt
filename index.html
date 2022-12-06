@@ -30,6 +30,11 @@ pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 }); 
+function stop() {
+  sound.pause()
+}
+let idle = setTimeout(stop(), 1000)
+pictu.onmousemove = clearTimeout(idle)
 pictu.addEventListener('mouseout', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
@@ -42,11 +47,7 @@ pictu.addEventListener('touchcancel', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
 });
-function stop() {
-  sound.pause()
-}
-let idle = setTimeout(stop(), 1000)
-pictu.onmousemove = clearTimeout(idle)
+
   </script>
 </body>
 </html>

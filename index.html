@@ -48,8 +48,7 @@ function mouse (element, delay, callback) {
 // Return
    return element.ms;
 };
-let x = mouse(pictu, 100, function(a){const sound = document.getElementById("track1");
-sound.pause();});
+let x = mouse(pictu, 100, function(a){sound.pause();});
 x.toggle(1); x.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();

@@ -17,9 +17,7 @@
 <audio loop id="track1" src="https://d1.endata.cx/data/games/75162/nswnsw.mp3" type="audio/mpeg" preload = 'auto'></audio>
 <script async type = 'text/javascript'>
 const pictu = document.getElementById("pictu");
-const sound = document.getElementById("track1");
-let x = setTimeout(sound.pause(), 1000)
-pictu.onmousemove = clearTimeout(x)
+
 pictu.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();

@@ -21,7 +21,7 @@ pictu.addEventListener('mousemove', function(event) {
   sound.play();
 });
  x = setTimeout(sound.pause(), 1000)
-pictu.onmousemove = clearTimeout()
+pictu.onmousemove = clearTimeout(x)
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();

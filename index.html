@@ -22,7 +22,7 @@ setInterval(let MX = pictu.mouseover.movementX, 100)
 setInterval(let MY = pictu.mouseover.movementY, 100)
   if (MX != 0 OR MY !=0) {
   sound.play();
-}else{
+}else if (MX == 0 AND MY == 0) {
    sound.pause();}
 });
 

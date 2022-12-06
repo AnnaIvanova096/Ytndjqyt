@@ -20,16 +20,16 @@
   
 const sound = document.getElementById("track1");  
 const pictu = document.getElementById("pictu");
+
+pictu.addEventListener('mousemove', function(event) {
+  const sound = document.getElementById("track1"); 
+  sound.play();
+});
 var timeout;
 pictu.onmousemove = function(){
   clearTimeout(timeout);
   timeout = setTimeout(function(){sound.stop()}, 1000);
 }
-pictu.addEventListener('mousemove', function(event) {
-  const sound = document.getElementById("track1"); 
-  sound.play();
-});
-
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();

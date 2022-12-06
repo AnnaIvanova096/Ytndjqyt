@@ -30,9 +30,9 @@ pictu.addEventListener('mouseout', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
 });
-  pictu.addEventListener('!mousemove', function(event) {
+  pictu.addEventListener('mouseover', function(event) {
   const sound = document.getElementById("track1");
-  sound.pause();
+  sound.pause(3000);
 });
 pictu.addEventListener('touchend', function(event) {
   const sound = document.getElementById("track1");

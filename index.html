@@ -38,7 +38,9 @@ function mouse (element, delay, callback) {
 };  
 const sound = document.getElementById("track1");  
 const pictu = document.getElementById("pictu");
-
+let x = mouse(pictu, 5000, function (a) {
+   sound.pause();
+});
 pictu.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1"); 
   sound.play();
@@ -47,9 +49,7 @@ pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
-let x = mouse(pictu, 5000, function (a) {
-   sound.pause();
-});
+
 pictu.addEventListener('mouseout', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();

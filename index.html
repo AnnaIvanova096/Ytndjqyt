@@ -18,7 +18,10 @@
   
 <script async type = 'text/javascript'>
   
+const sound = document.getElementById("track1");  
 const pictu = document.getElementById("pictu");
+  let idle = setTimer(sound.pause(), 1000);
+  pictu.onmousemove = clearTimer(idle)
   
 pictu.addEventListener('mousemove', function(event) {
   const sound = document.getElementById("track1");

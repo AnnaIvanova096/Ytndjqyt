@@ -29,7 +29,7 @@ pictu.addEventListener('touchmove', function(event) {
 let x = mouse(pictu, 500, function (a) {
    sound.pause();
 });
-  x.toggle(1); addEventListener("mousemove", function () {
+  x.toggle(1); pictu.addEventListener("mousemove", function () {
    sound.play();
 });
 function mouse (element, delay, callback) {

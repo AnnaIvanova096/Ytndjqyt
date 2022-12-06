@@ -25,19 +25,6 @@ pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
 });
-
-pictu.addEventListener('mouseout', function(event) {
-  const sound = document.getElementById("track1");
-  sound.pause();
-});
-pictu.addEventListener('touchend', function(event) {
-  const sound = document.getElementById("track1");
-  sound.pause();
-});
-pictu.addEventListener('touchcancel', function(event) {
-  const sound = document.getElementById("track1");
-  sound.pause();
-});
   
 let x = mouse(pictu, 500, function (a) {
    sound.pause();
@@ -65,6 +52,18 @@ function mouse (element, delay, callback) {
    return element.ms;
 };
 
+pictu.addEventListener('mouseout', function(event) {
+  const sound = document.getElementById("track1");
+  sound.pause();
+});
+pictu.addEventListener('touchend', function(event) {
+  const sound = document.getElementById("track1");
+  sound.pause();
+});
+pictu.addEventListener('touchcancel', function(event) {
+  const sound = document.getElementById("track1");
+  sound.pause();
+});
   </script>
 </body>
 </html>

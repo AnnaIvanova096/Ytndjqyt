@@ -18,8 +18,8 @@
 <script async type = 'text/javascript'>
 const pictu = document.getElementById("pictu");
 const sound = document.getElementById("track1");
-  let MX = pictu.onmouseover.movementX
-  let MY = pictu.onmouseover.movementY
+setInterval(let MX = pictu.onmouseover.movementX, 100)
+setInterval(let MY = pictu.onmouseover.movementY, 100)
   if (MX == 0 OR MY ==0) {
   sound.pause();
 }else{

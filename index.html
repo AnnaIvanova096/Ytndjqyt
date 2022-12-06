@@ -16,13 +16,7 @@
 <img id="pictu" src = "https://d1.endata.cx/data/games/75162/m1000x1000.jpg">
 <audio loop id="track1" src="https://d1.endata.cx/data/games/75162/nswnsw.mp3" type="audio/mpeg" preload = 'auto'></audio>
 <script async type = 'text/javascript'>
-const pictu = document.getElementById("pictu");
-const sound = document.getElementById("track1");
-  setInterval(let MX = MouseEvent.movementX, 100);
-  setInterval(let MY = MouseEvent.movementY, 100);
-  if (MX == 0 AND MY == 0) {
-    sound.pause();}
-  else { sound.play();}
+
 pictu.addEventListener('touchmove', function(event) {
   const sound = document.getElementById("track1");
   sound.play();
@@ -43,6 +37,13 @@ pictu.addEventListener('touchcancel', function(event) {
   const sound = document.getElementById("track1");
   sound.pause();
 });
+  const pictu = document.getElementById("pictu");
+const sound = document.getElementById("track1");
+  setInterval(let MX = MouseEvent.movementX, 100);
+  setInterval(let MY = MouseEvent.movementY, 100);
+  if (MX == 0 AND MY == 0) {
+    sound.pause();}
+  else { sound.play();}
 </script>
 
 </body>

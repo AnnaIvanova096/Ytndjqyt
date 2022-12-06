@@ -20,10 +20,10 @@ const pictu = document.getElementById("pictu");
 const sound = document.getElementById("track1");
 setInterval(let MX = pictu.onmouseover.movementX, 100)
 setInterval(let MY = pictu.onmouseover.movementY, 100)
-  if (MX == 0 OR MY ==0) {
-  sound.pause();
+  if (MX != 0 OR MY !=0) {
+  sound.play();
 }else{
-   sound.play();}
+   sound.pause();}
 });
 
 pictu.addEventListener('touchmove', function(event) {
